@@ -14,6 +14,14 @@ import Note from '../../img/icon_note.svg';
 import MenuIcon from '../../img/icon_menu.svg';
 import CloseIcon from '../../img/icon_close.svg';
 import './style.scss'
+
+const IconHasNoti = ({icon, countNoti}) => {
+  return <div className={"wrapIconHasNoti"}>
+    <img src={icon} alt="" />
+    <span className={"countNoti"}>{countNoti}</span>
+  </div>
+}
+
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -41,10 +49,10 @@ const Header = () => {
             <span className='txt-menu ml-8 '>チャレンジ</span>
           </Button>
           <Button className="menu-detail" color="inherit" component={NavLink} to="/column" activeClassName="active">
-            <img src={Info} alt="Info" />
+            <IconHasNoti icon={Info} countNoti={1} />
             <span className='txt-menu ml-8 '>お知らせ</span>
           </Button>
-          <Button className="btn-sub-menu"
+          <div className="btn-sub-menu"
             aria-controls="simple-menu"
             aria-haspopup="true"
             onClick={handleClick}
@@ -54,12 +62,21 @@ const Header = () => {
             ) : (
               <img src={MenuIcon} alt="MenuIcon" />
             )}
-          </Button>
+          </div>
           <Menu
             keepMounted
             anchorEl={anchorEl}
             onClose={handleClose}
             open={Boolean(anchorEl)}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            disableScrollLock={true}
           >
             <div className='sub-menu'>
               <MenuItem className='sub-menu-li' onClick={handleClose}>自分の記録</MenuItem>

@@ -1,0 +1,15 @@
+.ListFunction {
+  margin-top: 56px;
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 48px;
+    row-gap: 18px;
+  }
+  @media (min-width: 576px) {
+    .list {
+      column-gap: 48px;
+      row-gap: 48px;
+    }
+  }
+}

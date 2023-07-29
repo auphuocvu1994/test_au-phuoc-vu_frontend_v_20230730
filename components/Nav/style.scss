@@ -1,0 +1,68 @@
+.navbar-custom{
+    position: fixed !important;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    padding-top: 8px;
+}
+
+.logo img {
+    cursor: pointer;
+}
+
+.txt-menu {
+    color: #FFF;
+    font-family: Hiragino Kaku Gothic Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 23px;
+    /* 143.75% */
+    min-width: 96px;
+}
+
+.navbar-custom a.menu-detail {
+    padding: 8px 16px 8px 8px;
+    margin: 0;
+}
+
+.MuiList-root.MuiMenu-list.MuiList-padding {
+    background-color: transparent;
+    padding: 0;
+}
+
+.MuiMenu-paper{
+    top: 55px !important;
+}
+
+.btn-sub-menu{
+    cursor: pointer;
+}
+
+.sub-menu {
+    background-color: #777777;
+
+    .sub-menu-li {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 1px solid rgba(46, 46, 46, 0.25);
+        width: 280px;
+        padding: 22px 32px;
+        color: #FFF;
+        font-family: Hiragino Kaku Gothic Pro;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 26px;
+    }
+}
+
+.MuiList-padding{
+    padding: 0;
+}
+
+.navbar-header{
+    padding: 0 !important;
+}

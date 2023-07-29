@@ -1,0 +1,19 @@
+/* src/fonts.css */
+
+@font-face {
+
+
+    font-family: 'Hiragino Kaku Gothic Pro';
+
+
+    font-style: normal;
+
+
+    font-weight: 400;
+
+
+    src: local('Hiragino Kaku Gothic Pro'),
+
+
+        url('./fonts/HiraginoKakuGothicPro-Regular.otf') format('truetype');
+}

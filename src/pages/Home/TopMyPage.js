@@ -129,7 +129,7 @@ const TopMyPage = () => {
       <div className="btn-loadMore">
         <div className="container">
           <ButtonMain className="btnLoadMore" onClick={onLoadMore}>
-            自分の日記をもっと見る
+            記録をもっと見る
           </ButtonMain>
         </div>
       </div>

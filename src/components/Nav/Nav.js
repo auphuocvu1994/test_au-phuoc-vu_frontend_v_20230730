@@ -46,7 +46,9 @@ const IconHasNoti = ({ icon, countNoti }) => {
   return (
     <div className={"wrapIconHasNoti"}>
       <img src={icon} alt="" />
-      <span className={"countNoti"}>{countNoti}</span>
+      {
+        countNoti && <span className={"countNoti"}>{countNoti}</span>
+      }
     </div>
   );
 };
@@ -84,7 +86,8 @@ const Header = () => {
             component={NavLink}
             to="/home"
           >
-            <img src={Note2} alt="Note2" />
+            <IconHasNoti icon={Note2} />
+            {/*<img src={Note2} alt="Note2" />*/}
             <span className="txt-menu ml-8 ">自分の記録</span>
           </Button>
           <Button
@@ -93,7 +96,8 @@ const Header = () => {
             component={NavLink}
             to="/myRecord"
           >
-            <img src={Note} alt="Note" />
+            <IconHasNoti icon={Note} />
+            {/*<img src={Note} alt="Note" />*/}
             <span className="txt-menu ml-8 ">チャレンジ</span>
           </Button>
           <Button

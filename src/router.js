@@ -45,17 +45,25 @@ const routers = [
   },
 ];
 
+// Wrapper component for redirecting from the root URL based on isLogin status
+const RootRedirect = () => {
+  return isUserLoggedIn() ? <Navigate to="/home" replace={true} /> : <Navigate to="/login" replace={true} />;
+};
+
 export const Router = () => {
   return (
     <Routes>
+      {/* Render the wrapper component for root URL */}
+      <Route path="/" element={<RootRedirect />} />
+
       {routers.map((item) => {
-        const { layout: Layout, element: Element } = item;
-        let element = <Element />
+        const { layout: Layout, element: Element, path } = item;
+        let element = <Element />;
 
         // Check if the route requires authentication (MainLayout)
         if (Layout === MainLayout) {
           // If the user is not logged in, redirect them to the login page
-          if (!isUserLoggedIn()) {
+          if (!isUserLoggedIn() && item.path !== "/column") {
             element = <Navigate to="/login" replace={true} />;
           }
         }
@@ -63,7 +71,7 @@ export const Router = () => {
         if (Layout) {
           element = (
             <Layout>
-              <Element />
+              {element}
             </Layout>
           );
         }
@@ -72,12 +80,10 @@ export const Router = () => {
             key={item.name}
             exact={item.exact}
             element={element}
-            path={item.path}
+            path={path}
           />
         );
       })}
-      {/* Redirect to /home if isLogin is true */}
-      {isUserLoggedIn() ? <Navigate to="/home" replace={true} /> : <Route path="/" element={<Navigate to="/login" replace={true} />} />}
     </Routes>
   );
 };

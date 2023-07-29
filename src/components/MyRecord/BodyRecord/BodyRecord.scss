@@ -1,0 +1,60 @@
+.BodyRecord {
+  margin-top: 56px;
+  .content {
+    background: #414141;
+    padding: 16px 24px;
+  }
+  .headerBodyRecord {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+  .title {
+    color: #fff;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    min-width: 96px;
+  }
+  .date {
+    color: #fff;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.11px;
+  }
+  .distanceDisplay {
+    padding-left: 8px;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    .item {
+      cursor: pointer;
+      width: 56px;
+      height: 24px;
+      flex-shrink: 0;
+      border-radius: 11px;
+      background: #fff;
+      color: #ffcc21;
+      text-align: center;
+      font-family: Hiragino Kaku Gothic Pro;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 22px; /* 146.667% */
+      letter-spacing: 0.075px;
+      transition: all 0.15s;
+      &.active,
+      &:hover {
+        color: #fff;
+        background: #ffcc21;
+      }
+    }
+  }
+}

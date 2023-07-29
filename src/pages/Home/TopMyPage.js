@@ -12,6 +12,7 @@ import s01 from "../../img/l03(image).png";
 import ButtonMain from "../../components/Button/ButtonMain";
 import LineChartComponent from "../../components/MyRecord/BodyRecord/Chart";
 import Utils from "../../helpers/Utils";
+import AuthPage from "../../components/AuthPage/AuthPage";
 
 const dataItemFake = {
   title: "05.21.Morning",
@@ -88,7 +89,8 @@ const TopMyPage = () => {
   };
 
   return (
-    <div className="main-content">
+    <AuthPage isAuth={true}>
+      <div className="main-content">
       <div className="achievement_Rate">
         <div className="achievement_Rate_group">
           <div className="achievement_Rate_left">
@@ -132,6 +134,7 @@ const TopMyPage = () => {
         </div>
       </div>
     </div>
+    </AuthPage>
   );
 };
 

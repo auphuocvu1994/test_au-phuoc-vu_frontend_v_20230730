@@ -1,94 +1,94 @@
-.navbar-custom{
-    position: fixed !important;
-    z-index: 3;
-    top: 0;
-    left: 0;
+.navbar-custom {
+  position: fixed !important;
+  z-index: 3;
+  top: 0;
+  left: 0;
 }
 
 .logo {
-    padding-top: 8px;
-    img {
-        cursor: pointer;
-    }
+  padding-top: 8px;
+  img {
+    cursor: pointer;
+  }
 }
 
 .txt-menu {
-    color: #FFF;
-    font-family: Hiragino Kaku Gothic Pro;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 23px;
-    /* 143.75% */
-    min-width: 96px;
+  color: #fff;
+  font-family: Hiragino Kaku Gothic Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+  /* 143.75% */
+  min-width: 96px;
 }
 
 .navbar-custom a.menu-detail {
-    padding: 8px 16px 8px 8px;
-    margin: 0;
+  padding: 8px 16px 8px 8px;
+  margin: 0;
 }
 
 .MuiList-root.MuiMenu-list.MuiList-padding {
-    background-color: transparent;
-    padding: 0;
+  background-color: transparent;
+  padding: 0;
 }
 
-.MuiMenu-paper{
-    top: 55px !important;
+.MuiMenu-paper {
+  top: 55px !important;
 }
 
-.btn-sub-menu{
-    cursor: pointer;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
+.btn-sub-menu {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }
 .wrapIconHasNoti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .countNoti {
+    background: #ea6c00;
+    position: absolute;
+    padding: 0 4px;
+    top: -1px;
+    right: -7px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    .countNoti {
-        background: #EA6C00;
-        position: absolute;
-        padding: 0 4px;
-        top: -1px;
-        right: -7px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 16px;
-        height: 16px;
-        border-radius: 16px;
-        flex-shrink: 0;
-        color: white;
-        font-family: Inter;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 400;
-    }
+    min-width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    color: white;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+  }
 }
 .sub-menu {
-    background-color: #777777;
+  background-color: #777777;
 
-    .sub-menu-li {
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-        border-bottom: 1px solid rgba(46, 46, 46, 0.25);
-        width: 280px;
-        padding: 22px 32px;
-        color: #FFF;
-        font-family: Hiragino Kaku Gothic Pro;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 26px;
-    }
+  .sub-menu-li {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(46, 46, 46, 0.25);
+    width: 280px;
+    padding: 22px 32px;
+    color: #fff;
+    font-family: Hiragino Kaku Gothic Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+  }
 }
 
-.MuiList-padding{
-    padding: 0;
+.MuiList-padding {
+  padding: 0;
 }
 
-.navbar-header{
-    padding: 0 !important;
+.navbar-header {
+  padding: 0 !important;
 }

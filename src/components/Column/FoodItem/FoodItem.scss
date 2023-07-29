@@ -1,0 +1,53 @@
+.FoodItem {
+  width: 100%;
+  .wrapImage {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    .image {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+    .time {
+      background: #ffcc21;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 2px 8px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+  }
+  .content {
+    margin-top: 8px;
+    .title {
+      color: #414141;
+      font-family: Hiragino Kaku Gothic Pro;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 22px; /* 146.667% */
+      letter-spacing: 0.075px;
+    }
+    .tags {
+      margin-top: 2px;
+      color: #ff963c;
+      font-family: Hiragino Kaku Gothic Pro;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 22px; /* 183.333% */
+      letter-spacing: 0.06px;
+    }
+  }
+  @media (min-width: 576px) {
+    width: 234px;
+    .wrapImage {
+      height: 144.47px;
+    }
+  }
+}

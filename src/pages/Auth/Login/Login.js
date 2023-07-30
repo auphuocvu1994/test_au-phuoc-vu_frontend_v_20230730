@@ -5,8 +5,8 @@ import ButtonMain from "../../../components/Button/ButtonMain";
 import LogoLogin from "../../../img/logo192.png"
 function Login(props) {
   const navigate = useNavigate();
-  const [username, setUserName] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUserName] = useState("admin");
+  const [password, setPassword] = useState("1");
   const [error, setError] = useState("");
 
   const onLogin = (e) => {

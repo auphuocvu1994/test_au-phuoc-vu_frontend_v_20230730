@@ -6,6 +6,7 @@ import Login from "./pages/Auth/Login/Login";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
 import Column from "./pages/Column/Column";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 // Utility function to check isLogin status
 const isUserLoggedIn = () => {
@@ -43,6 +44,13 @@ const routers = [
     element: Login,
     layout: AuthLayout,
   },
+  {
+    name: "NotFoundPage",
+    exact: true,
+    path: "*",
+    element: NotFoundPage,
+    layout: AuthLayout,
+  },
 ];
 
 // Wrapper component for redirecting from the root URL based on isLogin status
@@ -60,14 +68,6 @@ export const Router = () => {
         const { layout: Layout, element: Element, path } = item;
         let element = <Element />;
 
-        // Check if the route requires authentication (MainLayout)
-        if (Layout === MainLayout) {
-          // If the user is not logged in, redirect them to the login page
-          if (!isUserLoggedIn() && item.path !== "/column") {
-            element = <Navigate to="/login" replace={true} />;
-          }
-        }
-
         if (Layout) {
           element = (
             <Layout>
@@ -75,6 +75,7 @@ export const Router = () => {
             </Layout>
           );
         }
+
         return (
           <Route
             key={item.name}

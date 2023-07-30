@@ -40,6 +40,10 @@ const listItemMenu = [
     text: "設定",
     href: "",
   },
+  {
+    text: "Logout",
+    href: "/login",
+  },
 ];
 
 const IconHasNoti = ({ icon, countNoti }) => {
@@ -59,6 +63,10 @@ const Header = () => {
 
   const handleClose = (item) => {
     if (item.href) {
+      if (item.href === "/login") {
+        // If the user clicks on "Logout" button, remove the "isLogin" item from localStorage
+        localStorage.removeItem("isLogin");
+      }
       navigate(item.href);
     }
     setAnchorEl(null);
